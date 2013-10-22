@@ -1,0 +1,520 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+<%@ Register Assembly="Trirand.Web" TagPrefix="trirand" Namespace="Trirand.Web.UI.WebControls" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+  <link rel="stylesheet" href="CoreAdmin/css.css">
+
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title>Gildan</title>
+
+<script src="../jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="/path/to/jquery.easy-pie-chart.js"></script>
+
+<link rel="stylesheet"type="text/css" href="/path/to/jquery.easy-pie-chart.css">
+
+
+
+  <link href="CoreAdmin/application.css" media="screen" rel="stylesheet" type="text/css">
+
+  <script src="CoreAdmin/application.js" type="text/javascript"></script>
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}
+</style>
+
+<!------  Los scripts para utilizar el jqGrid en todos mis archivos que usen esta MasterPage. ***Master-D***    -------->
+<!-- The jQuery UI theme that will be used by the grid -->
+    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.0/themes/redmond/jquery-ui.css" />
+    <!-- The jQuery UI theme extension jqGrid needs -->
+    <link rel="stylesheet" type="text/css" media="screen" href="themes/ui.jqgrid.css" />
+    <!-- jQuery runtime minified -->
+    <script src="http://ajax.googleapis.../ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+    <!-- The localization file we need, English in this case -->
+    <script src="js/trirand/i18n/grid.locale-en.js"type="text/javascript"></script>
+    <!-- The jqGrid client-side javascript -->
+    <script src="js/trirand/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style>
+        body { font-size: 75%; }
+    </style>
+<!------  Los scripts para utilizar el jqGrid en todos mis archivos que usen esta MasterPage. ***Master-D***    -------->
+
+
+</head>
+
+
+<body>
+<nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Gildan</a>
+
+    
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-primary">
+          <span class="sr-only">Toggle Side Navigation</span>
+          <i class="icon-th-list"></i>
+        </button>
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-top">
+          <span class="sr-only">Toggle Top Navigation</span>
+          <i class="icon-align-justify"></i>
+        </button>
+    
+  </div>
+
+  
+      
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-collapse-top">
+        <div class="navbar-right">
+
+          <ul class="nav navbar-nav navbar-left">
+            <li class="cdrop active"><a href="#">Planta mas Segura</a></li>
+
+            <li class="cdrop"><a href="#">Estadísticas</a></li>
+
+            <li class="dropdown cdrop">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Plantas <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Gildan Chemical</a></li>
+                <li><a href="#">Gildan Activewear</a></li>
+                <li><a href="#">Anvil Knitwear</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Otras</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input class="search-query animated" placeholder="Buscar" type="text">
+              <i class="icon-search"></i>
+            </div>
+          </form>
+
+          <ul class="nav navbar-nav navbar-left">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle dropdown-avatar" data-toggle="dropdown">
+              <span>
+                <img class="menu-avatar" src="CoreAdmin/avatar1.jpg"> <span>Supervisor Diego<i class="icon-caret-down"></i></span>
+                <span class="badge badge-dark-red">!</span>
+              </span>
+              </a>
+              <ul class="dropdown-menu">
+
+                <!-- the first element is the one with the big avatar, add a with-image class to it -->
+
+                <li class="with-image">
+                  <div class="avatar">
+                    <img src="CoreAdmin/avatar1.jpg">
+                  </div>
+                  <span>Supervisor Diego</span>
+                </li>
+
+                <li class="divider"></li>
+
+                <li><a href="#"><i class="icon-user"></i> <span>Emergencia</span></a></li>
+                <li><a href="#"><i class="icon-off"></i> <span>Salir</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+
+
+
+      </div><!-- /.navbar-collapse -->
+
+  
+</nav>
+<div class="sidebar-background">
+  <div class="primary-sidebar-background"></div>
+</div>
+
+<div class="primary-sidebar">
+
+  <!-- Main nav -->
+  <ul class="nav navbar-collapse collapse navbar-collapse-primary">
+    
+    
+    <!--    ----------------------------------    Inicio    ----------------------------------      -->
+        <li class="active">
+          <span class="glow"></span>
+          <a href="Inicio.aspx">
+              <i class="icon-dashboard icon-2x"></i>
+              <span>Inicio</span>
+          </a>
+        </li>
+    <!--    ----------------------------------    Inicio    ----------------------------------      -->    
+
+
+
+    <!--    ----------------------------------    Boleta    ----------------------------------      -->
+        <li class="">
+          <span class="glow"></span>
+          <a href="Boleta.aspx">
+              <i class="icon-edit icon-2x"></i>
+              <span>Boleta</span>
+          </a>
+        </li>
+    <!--    ----------------------------------    Boleta    ----------------------------------      -->
+    
+
+        <li class="dark-nav ">
+          <span class="glow"></span>
+
+    
+    <!--    -------------------------------    Mantenimientos    -------------------------------      -->
+    <!--    ------------------------------ Mantenimientos Main    ------------------------------      -->
+          <a class="accordion-toggle collapsed " data-toggle="collapse" href="#Mantenimientos">
+              <i class="icon-beaker icon-2x"></i>
+                    <span>
+                      Mantenimientos
+                      <i class="icon-caret-down"></i>
+                    </span>
+
+          </a>
+    <!--    ------------------------------ Mantenimientos Main    ------------------------------      -->
+
+          <ul id="Mantenimientos" class="collapse ">
+            
+                <li class="">
+                  <a href="MantenimientoClientes.aspx">
+                      <i class="icon-hand-up"></i> Empleados
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="#">
+                      <i class="icon-beaker"></i> Boletas
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="#">
+                      <i class="icon-info-sign"></i> Regiones
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="#">
+                      <i class="icon-th-large"></i> Plantas
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="">
+                      <i class="icon-table"></i> Cargos
+                  </a>
+                </li>
+
+                <li class="">
+                  <a href="">
+                      <i class="icon-table"></i> Usuarios
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="">
+                      <i class="icon-plus-sign-alt"></i> Perfiles
+                  </a>
+                </li>
+          </ul>
+        </li>
+
+    <!--    -------------------------------    Mantenimientos    -------------------------------      -->
+
+
+    
+        
+    <!--    --------------------------------    Reportes Main    -------------------------------      -->
+        <li class="dark-nav ">
+          <span class="glow"></span>
+
+    <!--    -----------------------------------    Reportes    ----------------------------------      -->
+
+          <a class="accordion-toggle collapsed " data-toggle="collapse" href="#Reportes">
+              <i class="icon-link icon-2x"></i>
+                    <span>
+                      Reportes
+                      <i class="icon-caret-down"></i>
+                    </span>
+
+          </a>
+
+          <ul id="Reportes" class="collapse ">
+            
+                <li class="">
+                  <a href="#">
+                      <i class="icon-magic"></i> Por País
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="#">
+                      <i class="icon-user"></i> Por Planta
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="#">
+                      <i class="icon-user"></i> Nivel Crítico
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="#">
+                      <i class="icon-calendar"></i> Rango de Fechas
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="#">
+                      <i class="icon-ban-circle"></i> Otros
+                  </a>
+                </li>
+          </ul>
+         <!--    -----------------------------------    Reportes    ----------------------------------      -->
+         
+        </li>
+       <!--    ----------------------------------    Reportes Main    --------------------------------      -->
+
+       
+    
+    <!--    ----------------------------------    Configuraciones    ---------------------------------      -->
+        <li class="">
+          <span class="glow"></span>
+          <a href="Configuraciones.aspx">
+              <i class="icon-bar-chart icon-2x"></i>
+              <span>Configuraciones</span>
+          </a>
+        </li>
+    <!--    ----------------------------------    Configuraciones    ---------------------------------      -->
+    
+
+
+
+  </ul>
+
+<!--    ------------------------------------    Fin de Menu Lateral  ----------------------------------      -->
+
+  <div class="hidden-sm hidden-xs">
+    <div class="text-center" style="margin-top: 60px">
+      <div class="easy-pie-chart-percent easyPieChart" style="display: inline-block; width: 150px; height: 150px; line-height: 150px;" data-percent="89"><span>28%</span><canvas style="width: 150px; height: 150px;" width="187" height="187"></canvas></div>
+      <div style="padding-top: 20px"><b>Nivel de Seguridad</b></div>
+    </div>
+
+    <hr class="divider" style="margin-top: 60px">
+
+    <div class="sparkline-box side">
+
+      <div class="sparkline-row">
+        <h4 class="gray"><span>Acciones Inseguras</span> 847</h4>
+      </div>
+
+      <hr class="divider">
+      <div class="sparkline-row">
+        <h4 class="dark-green"><span>Condiciones Seguras</span> 43</h4>
+      </div>
+
+      <hr class="divider">
+      <div class="sparkline-row">
+        <h4 class="blue"><span>Crítico</span> 223</h4>
+      </div>
+
+      <hr class="divider">
+    </div>
+  </div>
+
+
+</div>
+<div class="main-content">
+  <div class="container">
+    <div class="row">
+
+      <div class="area-top clearfix">
+        <div class="pull-left header">
+          <h3 class="title">
+            <i class="icon-dashboard"></i>
+              Stop
+          </h3>
+          <h5>
+              Lista de Verificación para una Obervación</h5>
+        </div>
+
+        <ul class="list-inline pull-right sparkline-box">
+
+          <li class="sparkline-row">
+            <h4 class="blue"><span>Acciones Inseguras</span> 847</h4>
+          </li>
+
+          <li class="sparkline-row">
+            <h4 class="green"><span>Condiciones Inseguras</span> 223</h4>
+          </li>
+
+          <li class="sparkline-row">
+            <h4 class="red"><span>Crítico</span> 7930</h4>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container padded">
+    <div class="row">
+
+      <!-- Breadcrumb line      Content Place Holder para asi cambiar los navegadores segun la pagina activa -->
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+
+      <div id="breadcrumbs">
+        <div class="breadcrumb-button blue">
+          <span class="breadcrumb-label"><i class="icon-home"></i> Gildan</span>
+          <span class="breadcrumb-arrow"><span></span></span>
+        </div>
+
+        
+
+        <div class="breadcrumb-button">
+          <span class="breadcrumb-label">
+            <i class="icon-dashboard"></i> Inicio
+          </span>
+          <span class="breadcrumb-arrow"><span></span></span>
+        </div>
+      </div>
+    
+    </asp:ContentPlaceHolder>
+    
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+  <div class="col-md-3">
+    <!-- find me in partials/action_nav_normal -->
+
+<!--big normal buttons  Para poder editar en cualquier pagina los cuadros        -->
+ <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+      
+      <div class="action-nav-normal">
+
+  <div class="row action-nav-row">
+    <div class="col-sm-6 action-nav-button">
+      <a href="#" title="Contacto con Corriente Electrica">
+        <i class="icon-file-alt"></i>
+        <span>Contacto...</span>
+      </a>
+      <span class="triangle-button red"><i class="icon-plus"></i></span>
+    </div>
+
+    <div class="col-sm-6 action-nav-button">
+      <a href="#" title="Caidas">
+        <i class="icon-comments-alt"></i>
+        <span>Caidas</span>
+      </a>
+      <span class="label label-black">14</span>
+    </div>
+  </div>
+
+  <div class="row action-nav-row">
+    <div class="col-sm-6 action-nav-button">
+      <a href="#" title="Golpear contra o ser golpeados por objetos">
+        <i class="icon-folder-open-alt"></i>
+        <span>Golpear...</span>
+      </a>
+    </div>
+
+    <div class="col-sm-6 action-nav-button">
+      <a href="#" title="Quedar Atrapado Sobre, Entre o Dentro de Objetos">
+        <i class="icon-user"></i>
+        <span>Quedar...</span>
+      </a>
+      <span class="triangle-button green"><span class="inner">+3</span></span>
+    </div>
+  </div>
+
+  <div class="row action-nav-row">
+    <div class="col-sm-6 action-nav-button">
+      <a href="#" title="Inhalacion, Absorcion o Ingestion de una Sustancia Peligrosa">
+        <i class="icon-facebook-sign"></i>
+        <span>Inhalacion...</span>
+      </a>
+    </div>
+
+    <div class="col-sm-6 action-nav-button">
+      <a href="#" title="Contacto con Temperaturas Extremas">
+        <i class="icon-twitter"></i>
+        <span>Contacto...</span>
+      </a>
+      <span class="triangle-button blue"><span class="inner">+8</span></span>
+    </div>
+  </div>
+
+</div>
+    
+   </asp:ContentPlaceHolder>
+  
+  </div>
+
+  <div class="col-md-9">
+    <!-- find me in partials/big_chart -->
+
+<div class="box">
+  <div class="box-header">
+    <div class="title"></div>
+    <ul class="box-toolbar">
+      <li class="toolbar-link">
+        <a href="#" data-toggle="dropdown"><i class="icon-cog"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#"><i class="icon-plus-sign"></i> Add</a></li>
+          <li><a href="#"><i class="icon-remove-sign"></i> Remove</a></li>
+          <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="box-content padded">
+     
+
+
+     
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+
+
+    </asp:ContentPlaceHolder>
+
+
+
+     
+  </div>
+</div>
+
+  </div>
+</div>
+
+<div class="row">
+</div>
+
+  </div>
+</div>
+
+
+
+<div class="ex-tooltip"></div><div style="display: none;" id="galleryOverlay"><div id="gallerySlider"></div><a id="prevArrow"><i class="icon-angle-left icon-4x"></i></a><a id="nextArrow"><i class="icon-angle-right icon-4x"></i></a></div></body></html>
